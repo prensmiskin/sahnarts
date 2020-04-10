@@ -22,7 +22,7 @@ section.contact {
             }
             &.social-twitter {
                 a {
-                    background-color: $brand-twitter;
+                    background-color: #ff0000;
                     &:hover {
                         background-color: darken($brand-twitter, 5%);
                     }
