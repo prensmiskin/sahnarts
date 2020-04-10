@@ -195,508 +195,209 @@
       </ul>
     </div>
   </section>
-<div :class="['container', isSelected ? 'container-selected':'', isReady ? 'container-ready':'']" id="app">
-  <div class="team-container">
-    <div class="header">
-      <h2 class="header-title">Our Team</h2>
-    </div>
-    <div class="person-list">
-      <div class="person" v-for="(person,index) in persons" @click="selectPerson(index,$event)"><img class="person-img" :src="person.photo">
-        <div class="person-details">
-          <h2 class="person-title">{{person.name}}</h2>
-          <p class="person-desc">{{person.title}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="team-detail">
-    <div class="team-detail-inner" v-if="isOk">
-      <div class="team-detail-left" :style=`background-image:url(${selectedPersonData.photo})`>
-        <div class="team-detail-photo"><img :src="selectedPersonData.photo" alt="">
-        </div>
-      </div>
-      <div class="team-detail-right">
-        <div class="team-detail-bio">
-          <div class="team-detail-header">
-            <h2 class="person-title">{{selectedPersonData.name}}</h2>
-            <p class="person-desc">{{selectedPersonData.title}}</p>
-            <div class="social">
-              <a :href="selectedPersonData.social.facebook" target="_blank" class="ion-social-facebook"></a>
-              <a :href="selectedPersonData.social.twitter" target="_blank" class="ion-social-twitter"></a>
-              <a href="selectedPersonData.social.linkedin" target="_blank" class="ion-social-linkedin"></a>
-            </div>
-          </div>
-          <div class="team-detail-bio-content" v-html="selectedPersonData.bio">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="container">
+                    <div class="row">
+                        <div class="heading-title text-center">
+                            <h3 class="text-uppercase">Our professionals </h3>
+                            <p class="p-top-30 half-txt">Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://image.freepik.com/free-photo/man-standing-with-a-black-t-shirt_1187-1045.jpg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Hi There !</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Martin Smith</h5>
+                                <span>founder &amp; ceo</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://image.freepik.com/free-photo/elegant-man-with-thumbs-up_1149-1595.jpg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Hello World</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Franklin Harbet</h5>
+                                <span>HR Manager</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://image.freepik.com/free-photo/well-dressed-executive-with-crossed-arms_1098-3930.jpg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>I love to design</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Linda Anderson</h5>
+                                <span>Marketing Manager</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
   
   <style type="text/css">
-  
-$headings-font: "Yeseva One", cursive;
-$body-font: "Karla", sans-serif;
+  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
 
 
-
-.container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  flex-wrap: wrap;
+.heading-title {
+    margin-bottom: 100px;
 }
-.header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 45px;
-  overflow: hidden;
-  transition: 0.45s ease 0.05s;
-  max-height: 70px;
-  &-title {
-    width: 100%;
-    font-family: $headings-font;
-    font-size: 3.3em;
-    color: #fbf9bd;
-    margin-bottom: 15px;
-  }
+.text-center {
+    text-align: center;
 }
-
-.team-container {
-  padding: 0 30px;
-  box-sizing: border-box;
-  max-width: 1400px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  height: auto;
-}
-.person {
-  width: calc(25% - 30px);
-  cursor: pointer;
-  overflow: hidden;
-  transition: 0.45s;
-  position: relative;
-  &-details {
-    padding: 0 20px;
-    box-sizing: border-box;
-    margin-top: -15px;
-    transition: 0.3s;
-  }
-  &-img {
-    width: 100%;
-  }
-  &-title {
-    color: #fff;
-    font-size: 2em;
-  }
-  &-desc {
-    color: rgba(#fff, 0.2);
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-size: 0.8em;
+.heading-title h3 {
+    margin-bottom: 0;
     letter-spacing: 2px;
-  }
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    &:hover {
-      .person {
-        opacity: 0.6;
-      }
-    }
-  }
-  &:hover {
-    opacity: 1 !important;
-  }
-  &:before {
+    font-weight: normal;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.half-txt {
+    width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 25px;
+    color: #7e7e7e;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.team-member, .team-member .team-img {
+    position: relative;
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
     position: absolute;
+    top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background: #fbf9bd;
-    content: "";
-    height: 0px;
-    transition: 0.45s;
-  }
-  &:after {
-    content: "\f2ca";
-    font-family: "Ionicons";
-    font-size: 36px;
-    color: #282828;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    display: flex;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
     opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    text-align: center;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-    flex-direction: column;
-  }
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
-
-.container-selected {
-  .header {
-    max-height: 0px;
-  }
-  .person {
-    opacity: 0 !important;
-    pointer-events: none;
-  }
-  .person-list .person-selected {
-    opacity: 1 !important;
-
-    &:before {
-      height: 100%;
-    }
-    .person-details {
-      margin-top: -40px;
-      opacity: 0;
-    }
-  }
+.team-member:hover .team-hover .desk {
+    top: 35%;
 }
-.team-detail {
-  position: absolute;
-  width: calc(100% - 100px);
-  right: 80px;
-  top: 0;
-  height: 100%;
-  color: #fff;
-  transition: 0.15s;
-  opacity: 0;
-  visibility: hidden;
-  box-sizing: border-box;
-  &-bio {
-    &-content {
-      p {
-        margin-bottom: 15px;
-        line-height: 25px;
-        font-size: 1.05em;
-      }
-    }
-  }
-  &-header {
-    margin-bottom: 30px;
-  }
-  &-inner {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &-left {
-    position: relative;
-    width: 650px;
-    min-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    &:before {
-      width: 100%;
-      height: 100%;
-      content: "";
-      background: rgba(#282828, 0.8);
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    &:after {
-      width: 100%;
-      height: 100%;
-      content: "";
-      background: linear-gradient(
-        to right,
-        rgba(40, 40, 40, 0) 9%,
-        rgba(40, 40, 40, 0) 10%,
-        rgba(40, 40, 40, 0) 38%,
-        rgba(40, 40, 40, 1) 92%,
-        rgba(40, 40, 40, 1) 100%
-      );
-
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-  &-photo {
-    position: relative;
-    text-align: center;
-    z-index: 999;
-    width: 100%;
-    font-size: 0px;
-    img {
-      max-width: 100%;
-      box-shadow: 0 10px 22px rgba(0,0,0,.3);
-    }
-  }
-  &-right {
-    box-sizing: border-box;
-    width: calc(100% - 650px);
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    padding-right: 10%;
-    position: relative;
-    right: 0;
-    flex-wrap: wrap;
-    .person-title {
-      font-family: $headings-font;
-      font-size: 2.2em;
-    }
-  }
-}
-
-.container-ready {
-  .team-detail {
-    transition: 0.45s ease 0.3s;
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
     opacity: 1;
-    right: 0;
-    visibility: visible;
-    img {
-      width: 75%;
-    }
-  }
-  .team-container {
-    height: 0px;
-    overflow: hidden;
-  }
-  .person-selected {
-    left: 0px !important;
-    top: 0px !important;
-    z-index: 99;
-    height: 100% !important;
-    width: 100px !important;
-    pointer-events: auto;
-    &:after {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
 }
-
-.person-back {
-  &:before {
-    height: 0px !important;
-  }
-  .person-details {
-    margin-top: -15px !important;
-    transition-delay: 0.35s;
-    opacity: 1 !important;
-  }
-}
-
-.social {
-  margin-top: 15px;
-  a {
-    color: #fbf9bd;
-    font-size: 20px;
-    margin-right: 8px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-@media (max-width: 1200px) {
-  .team-detail-left {
-    width: 400px;
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
-  .team-detail-right {
-    padding-right: 0;
-    width: calc(100% - 440px);
-  }
-  .person .person-title {
-    font-size: 1.7em;
-  }
-  .person-details {
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 970px) {
-  .team-detail-left {
+.team-hover .desk {
+    position: absolute;
+    top: 0%;
     width: 100%;
-    padding: 50px 50px 30px 50px;
-    &:after {
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(33, 33, 33, 1) 83%,
-        rgba(40, 40, 40, 1) 100%
-      );
-    }
-  }
-  .team-detail-right {
-    padding: 0 50px;
-    width: 100%;
-  }
-  .team-detail-header {
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
     text-align: center;
-  }
-  .container-ready .person-selected {
-    width: 50px !important;
-  }
-  .team-detail {
-    width: calc(100% - 50px);
-  }
-  .person {
-    width: calc(50% - 20px);
-  }
+    color: #222;
 }
-@media (max-width: 480px) {
-  .person {
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-bottom: 50px;
-  }
-  .header {
-    margin-top: 50px;
-  }
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member .s-link a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
 }
 
-  
+
 </style>
 
-<script type="text/javascript">
-  
 
-const persons = [
-  {
-    name: "Amber Gibs",
-    photo: "https://serving.photos.photobox.com/53464066dc132288128cb11531bb767f0082dcde75f3b845cd905d38c4223e95e0dc7bc9.jpg",
-    title: "Developer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Carl Roland",
-    photo: "https://serving.photos.photobox.com/2226093445b640ea69b3247d4e4a31ee16d7569a38f898affce33adc8fc8d0f3ecf79591.jpg",
-    title: "Developer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Paul Wilson",
-    photo: "https://serving.photos.photobox.com/80553616a29779bd113f7a340b9b1eae3636dd38534c57877597a17b7131be741c67b3ae.jpg",
-    title: "UI Designer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Alice Jenkins",
-    photo: "https://serving.photos.photobox.com/52898788b03c8a0e32a8cb52b4d43d7525f119daa2629569dbda0a8d827192217fb64c22.jpg",
-    title: "QA Engineer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  }
-];
-
-const app = new Vue({
-  el: "#app",
-  data() {
-    return {
-      persons: persons,
-      selectedPersonIndex: null,
-      isSelected: false,
-      selectedPerson: null,
-      inlineStyles: null,
-      isReady: false,
-      isOk: false,
-      selectedPersonData: {
-        name: null,
-        title: null,
-        photo: null,
-        social: {
-          facebook: null,
-          twitter: null,
-          linkedin: null
-        }
-      }
-    };
-  },
-  methods: {
-    selectPerson(index, el) {
-      if (!this.isOk) {
-        this.selectedPersonIndex = index;
-        this.isSelected = true;
-        el.target.parentElement.className == "person-details"
-          ? (this.selectedPerson = el.target.parentElement.parentElement)
-          : (this.selectedPerson = el.target.parentElement);
-
-        this.selectedPerson.classList.add("person-selected");
-        this.selectedPerson.setAttribute(
-          "style",
-          `width:${this.selectedPerson.offsetWidth}px;`
-        );
-        this.selectedPersonData = this.persons[index];
-        window.setTimeout(() => {
-          this.inlineStyles = `width:${this.selectedPerson
-            .offsetWidth}px;height:${this.selectedPerson
-            .offsetHeight}px;left:${this.selectedPerson.offsetLeft}px;top:${this
-            .selectedPerson.offsetTop}px;position:fixed`;
-          this.selectedPerson.setAttribute("style", this.inlineStyles);
-        }, 400);
-        window.setTimeout(() => {
-          this.isReady = true;
-          this.isOk = true;
-        }, 420);
-      } else {
-        this.reset();
-      }
-    },
-    reset() {
-      this.isReady = false;
-      window.setTimeout(() => {
-        this.selectedPerson.classList.add("person-back");
-      }, 280);
-      window.setTimeout(() => {
-        this.selectedPerson.setAttribute("style", "");
-      }, 340);
-      window.setTimeout(() => {
-        this.isSelected = false;
-        this.selectedPerson.classList.remove("person-back", "person-selected");
-        this.isOk = false;
-      }, 400);
-    }
-  }
-});
-
-  
-</script>
   
   <footer>
     <div class="container">
